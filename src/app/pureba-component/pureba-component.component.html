@@ -1,0 +1,11 @@
+
+@if(estaLogeado == true){
+    <h1>Estas logeado {{usuario}}</h1>
+    @for(lenguaje of lenguajes; track lenguaje.id){
+        <h2 (click)="favorito(lenguaje.nombre)">{{lenguaje.nombre}}</h2>
+    }
+    <h1>con el padre {{usuarioPadre}}</h1>
+}@else{
+    <h1>teines que hacer log</h1>
+    <button (click)="estaLogeado = true">inicio</button>
+}
